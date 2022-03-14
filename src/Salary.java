@@ -16,12 +16,13 @@ public class Salary
     {
         Scanner console = new Scanner(System.in);  // initialises scanner to accept inputs
         String username;
-        double normal, total = 0, totalReg = 0, totalEx = 0, regHours = 0, exHours = 0; // initialises all variables
+        double normal, total = 0, totalReg = 0, totalEx = 0, regHours, exHours; // initialises all variables
         double weeks;
         System.out.println("Hello, what is your name?");
         username = console.next();
         System.out.println("How many weeks did you work?");
         weeks = console.nextDouble();
+
         for(int i = 0; i  < weeks; i++) // for loop runs the number of weeks worked
         {
             System.out.println("Please enter number of hours worked this week: ");
@@ -44,7 +45,6 @@ public class Salary
             {
                 total=total*1.1;  // adds an extra 10% if earnings over 1k
             }
-
             }
         BigDecimal totalRounded = new BigDecimal(total);  // creates new object based on total var
         totalRounded = totalRounded.setScale(2, BigDecimal.ROUND_HALF_EVEN);  // rounds new object to 2 dec places
@@ -52,8 +52,6 @@ public class Salary
         BigDecimal weekRounded = new BigDecimal(weeks);
         weekRounded = weekRounded.setScale(0, BigDecimal.ROUND_HALF_EVEN);
 
-        System.out.println(username+" earnt a total of: $"+totalRounded+" in "+weekRounded+" weeks."); // prints overall total
-
-
+        System.out.println(username+" earned a total of: $"+totalRounded+" in "+weekRounded+" weeks."); // prints overall total
     }
 }
