@@ -46,7 +46,7 @@ public class Salary
 
             if(total <= 1000)  // adds an extra 10% if earnings over 1k
             {
-                total=total*1.1; // I have included all the bonus parts of this assessment
+                total=total*1.1; // I have included all the bonus parts of this assessment, the bonus additions may change desk checking, please take it into account.
                 bonus = "10%";
             }
             else if(total > 1000 && total <= 2000) // else if does exist :)
