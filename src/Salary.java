@@ -23,11 +23,19 @@ public class Salary
         username = console.next();  // takes user input and assigns it to defined value
         System.out.println("How many weeks did you work?");
         weeks = console.nextDouble();
+        while(weeks < 0){
+            System.out.println("Please enter a positive number:");
+            weeks = console.nextDouble();
+        }
 
         for(int i = 0; i  < weeks; i++) // for loop runs the number of weeks worked
         {
             System.out.println("Please enter number of hours worked this week: ");
             normal = console.nextDouble();  // takes user input and places in var normal
+            while(normal < 0){
+                System.out.println("Please enter a positive number:");
+                normal = console.nextDouble();
+            }
 
             if(normal <= 40)  // if normal is <= to 40 run this step
             {
